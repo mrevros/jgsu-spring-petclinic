@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mrevrosjgsuspringpetclinic 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mrevrosjgsuspringpetclinic
+  template:
+    metadata:
+      labels:
+        app: mrevrosjgsuspringpetclinic 
+    spec:
+      containers:
+        - name: mrevrosjgsuspringpetclinic 
+          image: mtabakregistry.azurecr.io/mrevrosjgsuspringpetclinic
+          ports:
+          - containerPort: 80
